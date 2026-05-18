@@ -1,0 +1,61 @@
+.label {
+    -fx-font-size: 40px;
+}
+
+.outline.label .text {
+    -fx-fill: lightseagreen;
+    -fx-stroke: firebrick;
+    -fx-stroke-width: 2px;
+}
+
+.label-bordata {
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-background-color: lightyellow;
+    -fx-background-radius: 5;
+    -fx-alignment: center;
+    -fx-pref-width: 70px;
+    -fx-pref-height:70px;
+    -fx-min-width:  70px;
+    -fx-min-height: 70px;
+    -fx-max-width:  70px;
+    -fx-max-height: 70px;
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+}
+
+.label-linput {
+    -fx-border-color: black;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+    -fx-background-color: lightgray;
+    -fx-background-radius: 5;
+    -fx-alignment: center;
+    -fx-pref-width: 70px;
+    -fx-pref-height:70px;
+    -fx-min-width:  70px;
+    -fx-min-height: 70px;
+    -fx-max-width:  70px;
+    -fx-max-height: 70px;
+    -fx-font-size: 40pt;
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 30px;
+}
+
+.trybutton {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 40px;
+    -fx-background-color: Orange;
+    -fx-border-color: White ;
+    -fx-background-radius:6;
+    -fx-border-radius:6;
+}
