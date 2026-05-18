@@ -15,7 +15,7 @@ Il Controller dovrà poter chiedere al Model di iniziare una nuova partita, invi
 
 ## Interfaccia
 Per facilitare l’integrazione con View e Controller, il Model è stato progettato con una su metodi che descrivono azioni o richieste di informazione.
-
+```java
 public class  GiocoPassword   {
     void caricaDizionario(String nomeFile) throws IOException;
     void nuovaPartita(Livello livello, int numeroMassimoTentativi);
@@ -31,6 +31,7 @@ public class  GiocoPassword   {
     EsitoTentativo giocaTentativo(String parola);
     String getParolaSegreta();   // solo per test o fine partita
 }
+```
 
 ## Significato dei metodi
 ### caricaDizionario(...) 
@@ -57,7 +58,8 @@ public class EsitoTentativo {
     private String messaggio;
     private boolean parolaIndovinata;
     // costruttori, getter, setter se necessari
-}```
+}
+```
 
 dove StatoLettera può essere un enum del tipo:
 
@@ -66,5 +68,6 @@ public enum StatoLettera {
     CORRETTA,
     PRESENTE,
     ASSENTE
-}```
+}
+```
 o semplicemente una stringa che contiene una delle tre voci di stato
