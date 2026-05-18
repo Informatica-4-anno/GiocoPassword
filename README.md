@@ -19,20 +19,16 @@ Per facilitare l’integrazione con View e Controller, il Model è stato progett
 public class  GiocoPassword   {
     void caricaDizionario(String nomeFile) throws IOException;
     void nuovaPartita(Livello livello, int numeroMassimoTentativi);
-
     boolean isPartitaInCorso();
     boolean isPartitaVinta();
     boolean isPartitaPersa();
     boolean isPartitaTerminata();
-
     int getLunghezzaParola();
     int getTentativiMassimi();
     int getTentativiEffettuati();
     int getTentativiRimanenti();
-
     boolean isParolaValida(String parola);
     EsitoTentativo giocaTentativo(String parola);
-  
     String getParolaSegreta();   // solo per test o fine partita
 }
 
@@ -53,21 +49,22 @@ I metodi getTentativiRimanenti() e simili forniscono dati già pronti da visuali
 Per evitare che il metodo giocaTentativo(...) restituisca solo una stringa difficile da gestire, è consigliato usare una classe dedicata che rappresenti in modo strutturato il risultato del tentativo, perché questo rende più semplice l’uso nella futura interfaccia grafica.
 Una possibile struttura è:
 
+```java
 public class EsitoTentativo {
     private String parolaInserita;
     private List<StatoLettera> stati; // ArrayLista con lo stato di ogni singola lettera 
     private boolean tentativoValido;
     private String messaggio;
     private boolean parolaIndovinata;
-
     // costruttori, getter, setter se necessari
-}
+}```
 
 dove StatoLettera può essere un enum del tipo:
 
+```java
 public enum StatoLettera {
     CORRETTA,
     PRESENTE,
     ASSENTE
-}
+}```
 o semplicemente una stringa che contiene una delle tre voci di stato
